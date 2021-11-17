@@ -1,0 +1,157 @@
+version: "3"
+
+services:
+  pos1:
+    image: "heini/openethnet:v1"
+    tty: true
+    ports:
+      - 8547:8547
+      - 30303:30303
+    environment:
+      ENV: ETHERNODE1
+      RPCPORT: 8547
+      PORT: 30303
+    volumes:
+      - ./config1.toml:/openethereum/config.toml
+      - ./genesis.json:/openethereum/genesis.json
+      - ./password:/openethereum/password
+      - ./nodes:/openethereum/nodes
+      - ./keys1:/openethereum/keys
+    container_name: pos1
+    command: >
+      sh -c "cd ~/
+            /openethereum/target/release/openethereum --config /openethereum/config.toml"
+    working_dir: /openethereum
+
+  pos2:
+    image: "heini/openethnet:v2"
+    tty: true
+    ports:
+      - 8548:8548
+      - 30304:30304
+    environment:
+      ENV: ETHERNODE2
+      RPCPORT: 8548
+      PORT: 30304
+    volumes:
+      - ./config2.toml:/openethereum/config.toml
+      - ./genesis.json:/openethereum/genesis.json
+      - ./password:/openethereum/password
+      - ./nodes:/openethereum/nodes
+      - ./keys2:/openethereum/keys
+    container_name: pos2
+    command: >
+      sh -c "cd ~/
+            /openethereum/target/release/openethereum --config /openethereum/config.toml"
+    working_dir: /openethereum
+
+  pos3:
+    image: "heini/openethnet:v3"
+    tty: true
+    ports:
+      - 8549:8549
+      - 30305:30305
+    environment:
+      ENV: ETHERNODE3
+      RPCPORT: 8549
+      PORT: 30305
+    volumes:
+      - ./config3.toml:/openethereum/config.toml
+      - ./genesis.json:/openethereum/genesis.json
+      - ./password:/openethereum/password
+      - ./nodes:/openethereum/nodes
+      - ./keys3:/openethereum/keys
+    container_name: pos3
+    command: >
+      sh -c "cd ~/
+            /openethereum/target/release/openethereum --config /openethereum/config.toml"
+    working_dir: /openethereum
+
+  pos4:
+    image: "heini/openethnet:v4"
+    tty: true
+    ports:
+      - 8550:8550
+      - 30306:30306
+    environment:
+      ENV: ETHERNODE4
+      RPCPORT: 8550
+      PORT: 30306
+    volumes:
+      - ./config4.toml:/openethereum/config.toml
+      - ./genesis.json:/openethereum/genesis.json
+      - ./password:/openethereum/password
+      - ./nodes:/openethereum/nodes
+      - ./keys4:/openethereum/keys
+    container_name: pos4
+    command: >
+      sh -c "cd ~/
+            /openethereum/target/release/openethereum --config /openethereum/config.toml"
+    working_dir: /openethereum
+
+  pos5:
+    image: "heini/openethnet:v5"
+    tty: true
+    ports:
+      - 8551:8551
+      - 30307:30307
+    environment:
+      ENV: ETHERNODE5
+      RPCPORT: 8551
+      PORT: 30307
+    volumes:
+      - ./config5.toml:/openethereum/config.toml
+      - ./genesis.json:/openethereum/genesis.json
+      - ./password:/openethereum/password
+      - ./nodes:/openethereum/nodes
+      - ./keys5:/openethereum/keys
+    container_name: pos5
+    command: >
+      sh -c "cd ~/
+            /openethereum/target/release/openethereum --config /openethereum/config.toml"
+    working_dir: /openethereum
+
+  pos6:
+    image: "heini/openethnet:v6"
+    tty: true
+    ports:
+      - 8552:8552
+      - 30308:30308
+    environment:
+      ENV: ETHERNODE6
+      RPCPORT: 8552
+      PORT: 30309
+    volumes:
+      - ./config6.toml:/openethereum/config.toml
+      - ./genesis.json:/openethereum/genesis.json
+      - ./password:/openethereum/password
+      - ./nodes:/openethereum/nodes
+      - ./keys6:/openethereum/keys
+    container_name: pos6
+    command: >
+      sh -c "cd ~/
+            /openethereum/target/release/openethereum --config /openethereum/config.toml"
+    working_dir: /openethereum
+
+  poscli:
+    image: "heini/openethnet"
+    tty: true
+    container_name: poscli
+    working_dir: /openethereum
+    command: /bin/bash
+
+    links:
+      - pos1:pos1
+      - pos2:pos2
+      - pos3:pos3
+      - pos4:pos4
+      - pos5:pos5
+      - pos6:pos6
+
+    depends_on:
+      - pos1
+      - pos2
+      - pos3
+      - pos4
+      - pos5
+      - pos6

@@ -1,0 +1,26 @@
+[parity]
+chain = "/openethereum/genesis.json" 
+base_path = "/openethereum/" 
+
+[network]
+port = 30304
+reserved_peers=  "/openethereum/nodes" 
+allow_ips = "all"
+
+[rpc]
+port = 8548
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces" ,"rpc", "parity_accounts"]
+interface = "all"
+cors = ["all"]
+
+[account]
+password = ["/openethereum/password"] 
+
+[mining]
+engine_signer = "0xf2f3a4dbbd6cf81b3f4a73bb58b906216ccb6e0f"
+gas_floor_target = "40000000"
+
+[misc]
+logging = "own_tx=trace"
+log_file = "/openethereum/log.log"
+color = true
