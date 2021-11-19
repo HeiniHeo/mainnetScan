@@ -2,7 +2,7 @@ version: "3"
 
 services:
   pos1:
-    image: "heini/openethnet:v1"
+    image: "heini/openethnet"
     tty: true
     ports:
       - 8547:8547
@@ -24,7 +24,7 @@ services:
     working_dir: /openethereum
 
   pos2:
-    image: "heini/openethnet:v2"
+    image: "heini/openethnet"
     tty: true
     ports:
       - 8548:8548
@@ -46,7 +46,7 @@ services:
     working_dir: /openethereum
 
   pos3:
-    image: "heini/openethnet:v3"
+    image: "heini/openethnet"
     tty: true
     ports:
       - 8549:8549
@@ -68,7 +68,7 @@ services:
     working_dir: /openethereum
 
   pos4:
-    image: "heini/openethnet:v4"
+    image: "heini/openethnet"
     tty: true
     ports:
       - 8550:8550
@@ -90,7 +90,7 @@ services:
     working_dir: /openethereum
 
   pos5:
-    image: "heini/openethnet:v5"
+    image: "heini/openethnet"
     tty: true
     ports:
       - 8551:8551
@@ -112,7 +112,7 @@ services:
     working_dir: /openethereum
 
   pos6:
-    image: "heini/openethnet:v6"
+    image: "heini/openethnet"
     tty: true
     ports:
       - 8552:8552

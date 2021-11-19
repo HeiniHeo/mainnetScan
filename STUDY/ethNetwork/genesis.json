@@ -7,10 +7,10 @@
         "stepDuration": "1",
         "validators": {
           "list": [
-            "0x3926bd6786eb6f676437cc2e9a87613980684bca",
-            "0xf2f3a4dbbd6cf81b3f4a73bb58b906216ccb6e0f",
-            "0x9b612f0220e421dc7a119b2265c7522701eba9f1",
-            "0x346ce54e8e1357c997ab491d0cb54f800cdbdbbe"
+            "0xa35aa7e43032f5cc32ee48c92ca3dc5b9f1e745d",
+            "0xa432698065d2c7cead5a4ec53e6cf03cde7c8152",
+            "0xeb4fbfc7dbd20eedab54f3ac864655b9ec7c2e96",
+            "0xd4f5eb8f86f0c8e9220ee940be1b4f2a7ae046cc"
           ]
         }
       }
@@ -39,10 +39,10 @@
     "gasLimit": "0x2625A00"
   },
   "accounts": {
-    "0x3926bd6786eb6f676437cc2e9a87613980684bca": {
+    "0xa35aa7e43032f5cc32ee48c92ca3dc5b9f1e745d": {
       "balance": "10000000000000000000000000"
     },
-    "0xf2f3a4dbbd6cf81b3f4a73bb58b906216ccb6e0f": {
+    "0xa432698065d2c7cead5a4ec53e6cf03cde7c8152": {
       "balance": "10000000000000000000000000"
     }
   }

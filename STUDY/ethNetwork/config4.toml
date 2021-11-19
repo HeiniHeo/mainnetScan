@@ -17,7 +17,7 @@ cors = ["all"]
 password = ["/openethereum/password"] 
 
 [mining]
-engine_signer = "0xf2f3a4dbbd6cf81b3f4a73bb58b906216ccb6e0f"  
+engine_signer = "0xa432698065d2c7cead5a4ec53e6cf03cde7c8152"  
 gas_floor_target = "40000000"
 
 [misc]
