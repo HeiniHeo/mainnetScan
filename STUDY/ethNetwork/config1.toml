@@ -9,7 +9,7 @@ allow_ips = "all"
 # Override the bootnodes from selected chain file.
 #bootnodes = ["enode://XXX@localhost:30300", "enode://XXXX@localhost:30301"]
 # Enable or disable new peers discovery.
-#discovery = false[rpc]
+discovery = true
 
 [rpc]
 port = 8547
@@ -17,11 +17,19 @@ apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces" ,"rpc
 interface = "all"
 cors = ["all"]
 
+[websockets]
+disable = false
+port = 10546
+interface = "all"
+origins = ["none"]
+apis = ["all"]
+hosts = ["all"]
+
 [account]
 password = ["/openethereum/password"] 
 
 [mining]
-engine_signer = "0xa35aa7e43032f5cc32ee48c92ca3dc5b9f1e745d"
+engine_signer = "0x93e29500fa7238667fa4b9040d9b555de412baa3"
 gas_floor_target = "40000000"
 
 [misc]
